@@ -4,10 +4,11 @@
 
 ---
 
-|chain1             |chain6           |   chain7 |chain8  |chain11|chain14
-|[suzen1][suzen1]   |suzen14          |suzen19   |suzen25 |       |       |
-|[suzen2][suzen2]   |suzen15          |suzen20   |suzen26 |       |       |
-|[suzen3][suzen3]   |suzen14          |suzen19   |suzen25 |       |       |
+|chain1             |chain6             |chain7             |chain8             |chain11            |chain14            |
+|-------------------|:-----------------:|------------------:|------------------:|------------------:|------------------:|
+|[suzen1][suzen1]   |[suzen14][suzen14] |[suzen19][suzen19] |suzen25            |                   |                   |
+|[suzen2][suzen2]   |[suzen15][suzen15] |[suzen20][suzen20] |suzen26            |                   |                   |
+|[suzen3][suzen3]   |[suzen16][suzen16] |[suzen21][suzen21] |suzen25            |                   |                   |
 
 ---
 
