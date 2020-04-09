@@ -14,7 +14,7 @@
 
 Если вам интересны именно ***скрипты*** то их стоит искать [здесь](https://github.com/sergo2048/OS-lab/tree/master/lab3)
 
-## suzen1 #suzen1 ##
+<h2 id='suzen1'> suzen1 </h2>
 
 ![/images/1.png](https://github.com/sergo2048/OS-lab/blob/master/lab1/images/1.png)
 
