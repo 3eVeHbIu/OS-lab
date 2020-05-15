@@ -138,7 +138,7 @@ cat /proc/mdstat
 
 Благодаря проделанной работе я научился размечать диски, монтировать тома *LVM*, создавать *RAID*. 
 
-<h2 id="part1">Часть 2</h2>
+<h2 id="part2">Часть 2</h2>
 
 В этой части я эмулирую отказ диска, путем его удаления. Но так как у нас настроен RAID, наша система 
 по прежнему будет работать.
@@ -185,6 +185,52 @@ dd if=/dev/sda of=/dev/sdb
 новый диск в систему RAID, а так же синхронизировать его с дригими дисками.
 
 
-<h2 id="part1">Часть 3</h2>
+<h2 id="part3">Часть 3</h2>
 
-скоро появится
+В этой части я буду добавлять новые диски, а так же переносить основной раздел. 
+
+Для начала произведу отказ диска 3, так же как и в предидущей части. И выведу список дисков.
+
+![\images\3.1.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.1.png)
+
+После я добавляю новый диск, но на этот раз его размер в 1.25 раз больше.
+
+![\images\3.2.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.2.png)
+
+Затем я скопирую файловую таблицу со старого диска на новый
+
+```bash
+sfdisk -d /dev/sda | sfdisk /dev/sdb
+``` 
+
+Теперь список дисков выглядит так
+
+![\images\3.3.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.3.png)
+
+Далее я копирую данные данные /boot на новый диск
+
+```bash
+dd if=/dev/sda of=/dev/sdb
+``` 
+
+И перемонтирую данный раздел на новый диск 
+
+![\images\3.4.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.4.png)
+ 
+ Устанавливаю загрузчик на новый диск
+ 
+![\images\3.5.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.5.png)
+ 
+ Создаю новый рейд-массив с включением туда только одного нового ssd диска 
+ 
+ ![\images\3.6.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.6.png)
+
+Но дальше все пошло не поплану.
+
+Создать новый физический том не удалось
+ 
+![\images\err1.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/err1.png)
+
+А после перезапуска машины md63 превратилось в md127, создать новый физический том так и не получилось...
+
+![\images\err.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/err.png)
