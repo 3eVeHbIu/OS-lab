@@ -217,15 +217,15 @@ dd if=/dev/sda of=/dev/sdb
 
 ![\images\3.4.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.4.png)
  
- Устанавливаю загрузчик на новый диск
+Устанавливаю загрузчик на новый диск
  
 ![\images\3.5.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.5.png)
  
- Создаю новый рейд-массив с включением туда только одного нового ssd диска 
+Создаю новый рейд-массив с включением туда только одного нового ssd диска 
  
- ![\images\3.6.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.6.png)
+![\images\3.6.png](https://raw.githubusercontent.com/sergo2048/OS-lab/master/lab2/images/3.6.png)
 
-Но дальше все пошло не поплану.
+Но дальше все пошло не по плану.
 
 Создать новый физический том не удалось
  
